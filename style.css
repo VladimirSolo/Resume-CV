@@ -1,0 +1,180 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:regular,500,700,900);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,500,700,900);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+body,
+html {
+  height: 100%;
+  line-height: 1;
+  font-family: 'Montserrat', sans-serif;
+}
+
+img {
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 5px;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  padding: 10px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fafafa;
+  background-color: #2e201a;
+  letter-spacing: 2px;
+}
+
+li {
+  padding: 5px 0;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.container {
+  min-height: 100%;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.left {
+  background-color: #cccdcc;
+  padding: 0 60px;
+}
+
+.block {
+  margin: 20px 0 0 0;
+}
+
+.left__avatar {
+  margin-top: 20px;
+
+}
+
+.left__img {
+  border: 10px solid #fafafa;
+  animation-name: photo-move;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0s;
+}
+
+.right {
+  background-color: #fafafa;
+  padding: 0 60px;
+}
+
+.right__title {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.right__text {
+  margin-top: 20px;
+  font-size: 24px;
+  animation-name: text-transform;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 0s;
+}
+
+.right__about {
+  margin-top: 60px;
+}
+
+.right__text2 {
+  margin-top: 20px;
+  text-align: justify;
+  font-weight: 500;
+
+}
+
+.right__portfolio {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right__portfolio div {
+  flex: 50%;
+  padding: 5px;
+}
+
+.right__portfolio div:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+@keyframes photo-move {
+  0% {
+    border-radius: 0%;
+  }
+
+  50% {
+    border: 10px solid #2e201a;
+  }
+
+  100% {
+    border-radius: 50%;
+  }
+}
+
+@keyframes text-transform {
+  0% {
+    transform: scaleX(0);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+/* media------------------------------------------------------ */
+@media (max-width: 999px) {
+  .right__portfolio {
+    display: block;
+  }
+}
+
+@media (max-width: 679px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .right__about {
+    margin-top: 20px;
+  }
+
+  .right__title {
+    margin-top: 20px;
+  }
+
+  .left {
+    background-color: #fafafa;
+  }
+}
